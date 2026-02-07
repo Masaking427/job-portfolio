@@ -1,89 +1,105 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteFooter from '../components/SiteFooter.astro';
-import SiteHeader from '../components/SiteHeader.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
 
 const experiences = [
   {
-    icon: 'work',
-    iconClass: 'border-primary text-primary dark:border-primary',
-    role: 'プロダクトプランナー',
-    company: '株式会社SIGNATE',
-    companyClass: 'text-primary',
-    badge: '在籍中',
-    period: '2023年10月 - 現在',
-    skills: ['KPI設計', 'SQL', 'Looker Studio', 'BigQuery', 'UI/UX企画', 'コンテンツ企画'],
-    challenge:
-      '初心者向けプログラムの継続率が低く、契約継続率にも影響。先行指標として設定した学習プログラムクリア率は12%に留まっていました。',
-    actions: [
-      'SQLによる行動ログ分析で、平均テスト受験回数が1.1回と低いボトルネックを特定。',
-      '離脱ユーザーへのヒアリングと行動観察を実施し、心理的ハードルと操作誤解の2つのペインを特定。',
-      '評価基準を2段階化し、各講座視聴直後に受験導線を出すUI改善を実装。',
+    icon: "work",
+    iconClass: "border-primary text-primary dark:border-primary",
+    role: "プロダクトプランナー",
+    company: "株式会社SIGNATE",
+    companyClass: "text-primary",
+    badge: "在籍中",
+    period: "2023年10月 - 現在",
+    skills: [
+      "KPI設計",
+      "SQL",
+      "Looker Studio",
+      "BigQuery",
+      "UI/UX企画",
+      "コンテンツ企画",
     ],
-    result:
-      'クリア率を12%から22%へ改善し、平均テスト受験回数を2.6回まで向上。契約継続企業比率62.5%から65.0%への改善と、前年比約1,420万円相当の売上増に貢献。',
+    challenge:
+      "初心者向けプログラムの継続率が低く、契約継続率にも影響。先行指標として設定した学習プログラムクリア率は12%に留まっていました。",
+    actions: [
+      "SQLによる行動ログ分析で、平均テスト受験回数が1.1回と低いボトルネックを特定。",
+      "離脱ユーザーへのヒアリングと行動観察を実施し、心理的ハードルと操作誤解の2つのペインを特定。",
+      "評価基準を2段階化し、各講座視聴直後に受験導線を出すUI改善を実装。",
+    ],
+    result: [
+      "クリア率を12%から22%へ改善し、平均テスト受験回数を2.6回まで向上。",
+      "契約継続企業比率62.5%から65.0%への改善。",
+      "前年比約1,420万円相当の売上増に貢献。",
+    ],
   },
   {
-    icon: 'school',
-    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
-    role: 'PL/PM・エンジニア',
-    company: 'フォーサイト株式会社',
-    companyClass: 'text-slate-600 dark:text-slate-300',
-    period: '2021年4月 - 2023年9月',
-    skills: ['PM', 'PL', 'UXリサーチ', '要件定義', 'Laravel', 'Vue.js'],
+    icon: "school",
+    iconClass: "border-slate-200 text-slate-400 dark:border-slate-700",
+    role: "PL/PM・エンジニア",
+    company: "フォーサイト株式会社",
+    companyClass: "text-slate-600 dark:text-slate-300",
+    period: "2021年4月 - 2023年9月",
+    skills: ["PM", "PL", "UXリサーチ", "要件定義", "Laravel", "Vue.js"],
     challenge:
-      'BtoC学習アプリでは学習フローと画面導線の不一致が発生し、チェックテスト回答率が低下。BtoB向けでは学習進捗の可視化不足が解約要因になっていました。',
+      "BtoC学習アプリでは学習フローと画面導線の不一致が発生し、チェックテスト回答率が低下。BtoB向けでは学習進捗の可視化不足が解約要因になっていました。",
     actions: [
-      'ManaBunの導線を機能軸から科目軸へ再設計し、授業連続再生機能を追加。',
-      'BtoB学習管理システムで、理解度を可視化する管理画面と追試機能を新規設計・実装。',
-      'DB変更が必要な改修とUI改修を分離し、段階リリースで工数とリスクを最適化。',
+      "ManaBunの導線を機能軸から科目軸へ再設計し、授業連続再生機能を追加。",
+      "BtoB学習管理システムで、理解度を可視化する管理画面と追試機能を新規設計・実装。",
+      "DB変更が必要な改修とUI改修を分離し、段階リリースで工数とリスクを最適化。",
     ],
     result:
-      'BtoCでチェックテスト回答数を1.18倍、主要資格の合格率を75%から76.1%へ改善。BtoBで学習者合格率を前年比12%改善し、新規契約数を前期比+5社増加。',
+      "BtoCでチェックテスト回答数を1.18倍、主要資格の合格率を75%から76.1%へ改善。BtoBで学習者合格率を前年比12%改善し、新規契約数を前期比+5社増加。",
   },
   {
-    icon: 'terminal',
-    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
-    role: 'フルスタックエンジニア',
-    company: 'Lotus and Company.inc',
-    companyClass: 'text-slate-600 dark:text-slate-300',
-    period: '2020年4月 - 2021年3月',
-    skills: ['Laravel', 'Vue.js', 'GCP', 'パフォーマンス改善', 'API連携'],
+    icon: "terminal",
+    iconClass: "border-slate-200 text-slate-400 dark:border-slate-700",
+    role: "フルスタックエンジニア",
+    company: "Lotus and Company.inc",
+    companyClass: "text-slate-600 dark:text-slate-300",
+    period: "2020年4月 - 2021年3月",
+    skills: ["Laravel", "Vue.js", "GCP", "パフォーマンス改善", "API連携"],
     challenge:
-      'シニア向けSNSサービスで表示速度が低く、ユーザー体験に影響。加えてキャンペーン申込ではセキュリティを担保した連携設計が必要でした。',
+      "シニア向けSNSサービスで表示速度が低く、ユーザー体験に影響。加えてキャンペーン申込ではセキュリティを担保した連携設計が必要でした。",
     actions: [
-      '画像遅延ロード、JS分割ロード、LP静的レンダリング、GCFによるWebP変換を導入。',
-      'SSO導入とAPI連携を設計し、セキュリティリスクを考慮した実装を実施。',
+      "画像遅延ロード、JS分割ロード、LP静的レンダリング、GCFによるWebP変換を導入。",
+      "SSO導入とAPI連携を設計し、セキュリティリスクを考慮した実装を実施。",
     ],
     result:
-      'Google PageSpeed Insightsスコアを16から60へ改善し、ロード時間を短縮。安全性と利便性を両立した申込基盤を構築。',
+      "Google PageSpeed Insightsスコアを16から60へ改善し、ロード時間を短縮。安全性と利便性を両立した申込基盤を構築。",
   },
   {
-    icon: 'apartment',
-    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
-    role: '総務・社内IT担当',
-    company: '株式会社山下電気',
-    companyClass: 'text-slate-600 dark:text-slate-300',
-    period: '2019年4月 - 2020年3月',
-    skills: ['社内IT環境整備', 'Google Analytics', '採用業務', 'ヘルプデスク'],
+    icon: "apartment",
+    iconClass: "border-slate-200 text-slate-400 dark:border-slate-700",
+    role: "総務・社内IT担当",
+    company: "株式会社山下電気",
+    companyClass: "text-slate-600 dark:text-slate-300",
+    period: "2019年4月 - 2020年3月",
+    skills: ["社内IT環境整備", "Google Analytics", "採用業務", "ヘルプデスク"],
     challenge:
-      '社内デバイス管理がアナログ運用で、業務効率と情報管理の精度に課題。Web運用ではアクセスデータの活用が十分に進んでいませんでした。',
+      "社内デバイス管理がアナログ運用で、業務効率と情報管理の精度に課題。Web運用ではアクセスデータの活用が十分に進んでいませんでした。",
     actions: [
-      '社内デバイス所在管理システムを設計・開発し、業務をデジタル化。',
-      'Google Analyticsで月次分析を行い、ページ別推移に対する改善提案を実施。',
-      '採用業務と社内サポートを横断し、日常業務の安定運用を支援。',
+      "社内デバイス所在管理システムを設計・開発し、業務をデジタル化。",
+      "Google Analyticsで月次分析を行い、ページ別推移に対する改善提案を実施。",
+      "採用業務と社内サポートを横断し、日常業務の安定運用を支援。",
     ],
     result:
-      '総務部門の運用工数削減と、データに基づくWeb運用の土台構築に貢献。複数業務を並行する運用体制の安定化を実現。',
+      "総務部門の運用工数削減と、データに基づくWeb運用の土台構築に貢献。複数業務を並行する運用体制の安定化を実現。",
   },
 ];
 
 const educationHistory = [
-  { period: '2010年4月', detail: '東京経済大学 経営学部 会計学科 入学' },
-  { period: '2015年3月', detail: '東京経済大学 経営学部 会計学科 卒業' },
-  { period: '2015年4月', detail: '国際基督教大学 教養学部 アーツ&サイエンス学科 入学' },
-  { period: '2017年6月', detail: 'Petra Christian University 留学' },
-  { period: '2019年3月', detail: '国際基督教大学 教養学部 アーツ&サイエンス学科 卒業' },
+  { period: "2010年4月", detail: "東京経済大学 経営学部 会計学科 入学" },
+  { period: "2015年3月", detail: "東京経済大学 経営学部 会計学科 卒業" },
+  {
+    period: "2015年4月",
+    detail: "国際基督教大学 教養学部 アーツ&サイエンス学科 入学",
+  },
+  { period: "2017年6月", detail: "Petra Christian University 留学" },
+  {
+    period: "2019年3月",
+    detail: "国際基督教大学 教養学部 アーツ&サイエンス学科 卒業",
+  },
 ];
 ---
 
@@ -96,8 +112,14 @@ const educationHistory = [
   <main class="w-full flex-grow px-4 py-12 md:px-8 lg:px-12">
     <div class="mx-auto max-w-4xl">
       <div class="mb-16 space-y-4">
-        <h2 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">職務経歴</h2>
-        <p class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <h2
+          class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl"
+        >
+          職務経歴
+        </h2>
+        <p
+          class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
+        >
           KPI策定・データ分析・ユーザーリサーチ・UI/UX企画・コンテンツ企画・要件定義までを一気通貫で担当。
           エンジニアリング経験を土台に、事業KPIに直結する改善を推進してきました。
         </p>
@@ -107,16 +129,26 @@ const educationHistory = [
         {
           experiences.map((item) => (
             <article class="timeline-line relative pl-0 md:pl-20">
-              <div class={`absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 bg-white shadow-sm md:flex dark:bg-slate-800 ${item.iconClass}`}>
-                <span class="material-symbols-outlined text-2xl">{item.icon}</span>
+              <div
+                class={`absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 bg-white shadow-sm md:flex dark:bg-slate-800 ${item.iconClass}`}
+              >
+                <span class="material-symbols-outlined text-2xl">
+                  {item.icon}
+                </span>
               </div>
 
               <div class="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-slate-800 dark:bg-[#15202b]">
                 <div class="mb-6 flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 dark:border-slate-700 sm:flex-row sm:items-start">
                   <div>
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{item.role}</h3>
-                    <div class={`mt-1 flex items-center gap-2 font-medium ${item.companyClass}`}>
-                      <span class="material-symbols-outlined text-[18px]">business</span>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                      {item.role}
+                    </h3>
+                    <div
+                      class={`mt-1 flex items-center gap-2 font-medium ${item.companyClass}`}
+                    >
+                      <span class="material-symbols-outlined text-[18px]">
+                        business
+                      </span>
                       <span>{item.company}</span>
                     </div>
                   </div>
@@ -126,50 +158,54 @@ const educationHistory = [
                         {item.badge}
                       </span>
                     )}
-                    <span class="text-sm text-slate-500 dark:text-slate-400">{item.period}</span>
+                    <span class="text-sm text-slate-500 dark:text-slate-400">
+                      {item.period}
+                    </span>
                   </div>
                 </div>
 
                 <div class="mb-8 flex flex-wrap gap-2">
-                  {
-                    item.skills.map((skill) => (
-                      <span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                        {skill}
-                      </span>
-                    ))
-                  }
+                  {item.skills.map((skill) => (
+                    <span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                      {skill}
+                    </span>
+                  ))}
                 </div>
 
                 <div class="space-y-8">
                   <div class="grid grid-cols-[24px_1fr] gap-4">
                     <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
-                      <span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+                      <span class="material-symbols-outlined text-[16px]">
+                        psychology_alt
+                      </span>
                     </div>
                     <div>
                       <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">
                         課題
                       </h4>
-                      <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">{item.challenge}</p>
+                      <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                        {item.challenge}
+                      </p>
                     </div>
                   </div>
 
                   <div class="grid grid-cols-[24px_1fr] gap-4">
                     <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-                      <span class="material-symbols-outlined text-[16px]">construction</span>
+                      <span class="material-symbols-outlined text-[16px]">
+                        construction
+                      </span>
                     </div>
                     <div>
                       <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">
                         取り組み
                       </h4>
                       <ul class="list-none space-y-2 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-                        {
-                          item.actions.map((action) => (
-                            <li class="flex items-start gap-2">
-                              <span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-                              <span>{action}</span>
-                            </li>
-                          ))
-                        }
+                        {item.actions.map((action) => (
+                          <li class="flex items-start gap-2">
+                            <span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                            <span>{action}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -177,13 +213,17 @@ const educationHistory = [
                   <div class="rounded-lg border border-green-100 bg-green-50 p-5 dark:border-green-900/30 dark:bg-green-900/10">
                     <div class="grid grid-cols-[24px_1fr] gap-4">
                       <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
-                        <span class="material-symbols-outlined text-[16px]">trending_up</span>
+                        <span class="material-symbols-outlined text-[16px]">
+                          trending_up
+                        </span>
                       </div>
                       <div>
                         <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-green-800 dark:text-green-400">
                           成果・インパクト
                         </h4>
-                        <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">{item.result}</p>
+                        <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+                          {item.result}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -194,17 +234,27 @@ const educationHistory = [
         }
 
         <section class="relative pl-0 md:pl-20">
-          <div class="absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white text-slate-400 shadow-sm md:flex dark:border-slate-700 dark:bg-slate-800">
+          <div
+            class="absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white text-slate-400 shadow-sm md:flex dark:border-slate-700 dark:bg-slate-800"
+          >
             <span class="material-symbols-outlined text-2xl">school</span>
           </div>
-          <div class="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-[#15202b]">
-            <h3 class="mb-4 text-xl font-bold text-slate-900 dark:text-white">学歴</h3>
+          <div
+            class="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-[#15202b]"
+          >
+            <h3 class="mb-4 text-xl font-bold text-slate-900 dark:text-white">
+              学歴
+            </h3>
             <ul class="space-y-3">
               {
                 educationHistory.map((item) => (
                   <li class="flex flex-col gap-1 border-b border-slate-200 pb-3 text-sm last:border-none last:pb-0 dark:border-slate-700">
-                    <span class="font-semibold text-slate-700 dark:text-slate-200">{item.period}</span>
-                    <span class="text-slate-600 dark:text-slate-400">{item.detail}</span>
+                    <span class="font-semibold text-slate-700 dark:text-slate-200">
+                      {item.period}
+                    </span>
+                    <span class="text-slate-600 dark:text-slate-400">
+                      {item.detail}
+                    </span>
                   </li>
                 ))
               }
