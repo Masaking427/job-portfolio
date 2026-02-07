@@ -4,9 +4,13 @@
 
 ## Stack
 
-- Astro (build tool: Vite, included in Astro)
+- TypeScript
+- Astro
 - Tailwind CSS
 - Cloudflare Pages
+
+## URL
+- https://job-portfolio-593.pages.dev/
 
 ## Pages
 
