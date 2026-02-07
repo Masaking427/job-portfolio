@@ -21,19 +21,16 @@ import { educationHistory, experiences } from "../data/experienceData";
           職務経歴
         </h2>
         <p
-          class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
+          class="max-w-4xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
         >
-          KPI策定・データ分析・ユーザーリサーチ・UI/UX企画・コンテンツ企画・要件定義までを一気通貫で担当。
-          エンジニアリング経験を土台に、事業KPIに直結する改善を推進してきました。
+          KPI策定・データ分析・ユーザーリサーチ・UI/UX企画・コンテンツ企画・要件定義を一気通貫で担当。
+          <br />
+          エンジニアリング経験を土台に、事業KPIに直結する改善を推進してきた。
         </p>
       </div>
 
       <div class="relative space-y-12">
-        {
-          experiences.map((item) => (
-            <ExperienceCard item={item} />
-          ))
-        }
+        {experiences.map((item) => <ExperienceCard item={item} />)}
 
         <section class="relative pl-0 md:pl-20">
           <div
