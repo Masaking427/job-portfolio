@@ -30,28 +30,21 @@ const journeyItems = [
     period: "2023年10月 - 現在",
     company: "株式会社SIGNATE",
     summary:
-      "AI/DX人材育成向けe-learningにて、KPI策定・データ分析・UI/UX企画・コンテンツ企画を担当。",
+      "AI/DX人材を育成するe-learningを担当。KPI策定・データ分析・UI/UX企画・コンテンツ企画をリード。",
   },
   {
-    role: "PL/PM・エンジニア",
+    role: "PM/PL",
     period: "2021年4月 - 2023年9月",
     company: "フォーサイト株式会社",
     summary:
-      "BtoB/BtoC学習プロダクトで、UXリニューアルと新規学習管理システム開発をリード。",
+      "大人向け資格学習アプリを担当。UXリニューアルと新規学習機能開発をリード。",
   },
   {
-    role: "フルスタックエンジニア",
+    role: "WEBエンジニア",
     period: "2020年4月 - 2021年3月",
     company: "Lotus and Company.inc",
     summary:
-      "Laravel、Vue.js、GCP環境で機能実装とパフォーマンス改善、セキュアなAPI連携設計を担当。",
-  },
-  {
-    role: "総務・社内IT担当",
-    period: "2019年4月 - 2020年3月",
-    company: "株式会社山下電気",
-    summary:
-      "社内IT環境整備、アクセス解析、採用業務までを横断して運用改善を担当。",
+      "シニア向けSNSを担当。Laravel、Vue.js、GCPで機能実装とパフォーマンス改善を実施。",
   },
 ];
 
@@ -66,6 +59,7 @@ const skills = [
   "JIRA",
   "Backlog",
   "Zendesk",
+  "Codex",
 ];
 
 const achievements = [
@@ -99,30 +93,51 @@ const achievements = [
     <section
       class="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 md:pb-24 md:pt-32 lg:px-8"
     >
-      <div class="max-w-4xl">
-        <div
-          class="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
+      <div
+        class="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-14"
+      >
+        <figure
+          class="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900 lg:mx-0"
         >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"
-            ></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-primary"
-            ></span>
-          </span>
-          転職活動中
+          <img
+            src="/masaki.jpg"
+            alt="野崎真揮のプロフィール写真"
+            class="h-full w-full object-cover"
+            loading="eager"
+          />
+        </figure>
+
+        <div>
+          <div class="flex flex-wrap items-center gap-3">
+            <h1
+              class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl"
+            >
+              野崎 真揮
+            </h1>
+            <div
+              class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex h-2 w-2 rounded-full bg-primary"
+                ></span>
+              </span>
+              転職活動中
+            </div>
+          </div>
+          <p class="mt-3 text-lg font-semibold text-primary md:text-xl">
+            プロダクトマネージャー
+          </p>
+          <p
+            class="mt-6 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg"
+          >
+            EdTech領域で、KPI策定、データ分析、ユーザーリサーチ、UI/UX企画、コンテンツ企画、要件定義までを一気通貫で担当。
+            データに基づいた企画立案を得意とし、プロダクト開発を通じて事業成果を追求する。
+          </p>
         </div>
-        <h1
-          class="mb-8 text-4xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white md:text-6xl lg:text-7xl"
-        >
-          プロダクトマネージャー <br class="hidden md:block" />プロダクト企画
-        </h1>
-        <p
-          class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400 md:text-xl"
-        >
-          KPI策定、データ分析、ユーザーリサーチ、UI/UX企画、コンテンツ企画、要件定義までを一気通貫で担当。
-          機能とコンテンツの両軸でユーザー体験を設計し、事業成果に直結する改善を推進してきました。
-        </p>
       </div>
     </section>
 
@@ -171,14 +186,25 @@ const achievements = [
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
         <div class="flex flex-col gap-16 lg:col-span-8">
           <div>
-            <h2
-              class="mb-8 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-            >
-              <span class="material-symbols-outlined text-primary"
-                >history_edu</span
+            <div class="mb-8 flex items-center justify-between gap-4">
+              <h2
+                class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
               >
-              職務経歴
-            </h2>
+                <span class="material-symbols-outlined text-primary"
+                  >history_edu</span
+                >
+                職務経歴
+              </h2>
+              <a
+                href="/experience"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+              >
+                詳細を見る
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </a>
+            </div>
             <div
               class="relative ml-3 space-y-12 border-l-2 border-slate-200 dark:border-slate-700"
             >
@@ -207,14 +233,25 @@ const achievements = [
           </div>
 
           <div>
-            <h2
-              class="mb-6 flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-            >
-              <span class="material-symbols-outlined text-primary"
-                >psychology</span
+            <div class="mb-6 flex items-center justify-between gap-4">
+              <h2
+                class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
               >
-              技術スキル
-            </h2>
+                <span class="material-symbols-outlined text-primary"
+                  >psychology</span
+                >
+                技術スキル
+              </h2>
+              <a
+                href="/skills"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+              >
+                詳細を見る
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </a>
+            </div>
             <div class="flex flex-wrap gap-2">
               {
                 skills.map((skill) => (
