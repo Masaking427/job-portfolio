@@ -5,73 +5,79 @@ import SiteHeader from '../components/SiteHeader.astro';
 
 const expertiseCards = [
   {
-    icon: 'account_tree',
-    title: 'システム思考',
+    icon: 'monitoring',
+    title: 'KPI設計とモニタリング',
     description:
-      'デザインと開発の橋渡しとなる、拡張性の高いデザインライブラリと包括的なスタイルガイドを設計します。',
+      'ビジネスゴールからKPIツリーを設計し、Looker StudioとBigQueryでダッシュボードを構築して改善サイクルを回します。',
   },
   {
     icon: 'manage_search',
-    title: 'ユーザーリサーチ',
+    title: '定量・定性リサーチ',
     description:
-      'データに基づく意思決定、A/Bテスト、継続的なユーザーフィードバックを通じてプロダクト改善を推進します。',
+      'SQLによる行動ログ分析とユーザーインタビュー・ユーザビリティテストを組み合わせ、再現性のある仮説検証を実行します。',
   },
   {
-    icon: 'diversity_3',
-    title: 'アジャイルリーダーシップ',
+    icon: 'auto_stories',
+    title: '機能とコンテンツの統合企画',
     description:
-      '変化の速い環境で部門横断チームをリードし、短納期でも品質を担保したデザイン提供を実現します。',
+      'UI/UX改善だけでなく教材企画や講師選定まで含めて設計し、学習成果と事業KPIの両立を推進します。',
   },
 ];
 
 const journeyItems = [
   {
-    role: 'プリンシパルプロダクトデザイナー',
-    period: '2021年 - 現在',
-    company: 'TechFlow Systems',
-    summary: 'コアSaaSプラットフォームにおけるUX戦略を統括し、Design Systemチームをリード。',
+    role: 'プロダクトプランナー',
+    period: '2023年10月 - 現在',
+    company: '株式会社SIGNATE',
+    summary: 'AI/DX人材育成向けe-learningにて、KPI策定・データ分析・UI/UX企画・コンテンツ企画を担当。',
   },
   {
-    role: 'シニアUX/UIデザイナー',
-    period: '2018年 - 2021年',
-    company: 'InnovateCorp',
-    summary: 'モバイルアプリのリデザインを主導し、初期コンポーネントライブラリを構築。',
+    role: 'PL/PM・エンジニア',
+    period: '2021年4月 - 2023年9月',
+    company: 'フォーサイト株式会社',
+    summary: 'BtoB/BtoC学習プロダクトで、UXリニューアルと新規学習管理システム開発をリード。',
   },
   {
-    role: 'プロダクトデザイナー',
-    period: '2015年 - 2018年',
-    company: 'Creative Solutions Agency',
-    summary: 'Fintech・ヘルスケア領域の複数クライアントに対して、要件定義からUI実装まで一気通貫で担当。',
+    role: 'フルスタックエンジニア',
+    period: '2020年4月 - 2021年3月',
+    company: 'Lotus and Company.inc',
+    summary: 'Laravel、Vue.js、GCP環境で機能実装とパフォーマンス改善、セキュアなAPI連携設計を担当。',
+  },
+  {
+    role: '総務・社内IT担当',
+    period: '2019年4月 - 2020年3月',
+    company: '株式会社山下電気',
+    summary: '社内IT環境整備、アクセス解析、採用業務までを横断して運用改善を担当。',
   },
 ];
 
 const skills = [
-  'Figma & FigJam',
-  'Design Systems',
-  'Prototyping',
-  'HTML/CSS Knowledge',
-  'Accessibility (WCAG 2.1)',
-  'Usability Testing',
-  'Agile/Scrum',
-  'User Flows',
-  'Interaction Design',
-  'Jira & Linear',
+  'KPI設計',
+  'Looker Studio',
+  'BigQuery',
+  'SQL',
+  'ユーザーインタビュー',
+  'ユーザビリティテスト',
+  'Figma Make',
+  'JIRA',
+  'Backlog',
+  'Zendesk',
 ];
 
 const achievements = [
   {
-    value: '+40%',
-    detail: 'TechFlowのチェックアウト導線改善により、CVRが40%向上。',
+    value: '+10pt',
+    detail: 'SIGNATEで学習プログラムクリア率を12%から22%へ改善。',
     iconClass: 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300',
   },
   {
-    value: '10k+ MAU',
-    detail: 'アプリ再リリース後6カ月で、月間アクティブユーザー10,000人以上を達成。',
+    value: '+2.4x',
+    detail: '平均テスト受験回数を1.1回から2.6回へ引き上げ、継続学習を促進。',
     iconClass: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300',
   },
   {
-    value: '30% Faster',
-    detail: 'FigmaでのDesign System整備により、開発着手までのリードタイムを30%短縮。',
+    value: '約1,420万円',
+    detail: '契約継続率改善により、前年比で売上増加に貢献。',
     iconClass: 'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300',
   },
 ];
@@ -92,14 +98,14 @@ const achievements = [
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
           </span>
-          面談・面接受付中
+          選考・面談対応中
         </div>
         <h1 class="mb-8 text-4xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white md:text-6xl lg:text-7xl">
-          シニアプロダクトデザイナー &amp; <br class="hidden md:block" />UXストラテジスト
+          プロダクトマネージャー <br class="hidden md:block" />プロダクト企画
         </h1>
         <p class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400 md:text-xl">
-          拡張性の高いデジタルプロダクト設計を専門とし、8年以上にわたり複雑な情報を直感的な体験へ変換。
-          B2B/B2C双方で、事業成果とユーザー価値を両立するUI/UXを推進してきました。
+          KPI策定、データ分析、ユーザーリサーチ、UI/UX企画、コンテンツ企画、要件定義までを一気通貫で担当。
+          機能とコンテンツの両軸でユーザー体験を設計し、事業成果に直結する改善を推進してきました。
         </p>
       </div>
     </section>
@@ -110,7 +116,7 @@ const achievements = [
           <div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">強み</h2>
             <p class="text-slate-500 dark:text-slate-400">
-              再現性の高いプロセスで、事業インパクトにつながるデザインを提供します。
+              定量と定性を組み合わせ、再現性の高いプロダクト改善を実行します。
             </p>
           </div>
         </div>
@@ -199,11 +205,11 @@ const achievements = [
             </ul>
             <div class="mt-8 border-t border-slate-200 pt-8 dark:border-slate-700">
               <p class="mb-4 text-sm text-slate-500 dark:text-slate-400">
-                詳細なケーススタディをご希望ですか？
+                詳細な職務実績は面談時に共有可能です。
               </p>
               <button class="flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 px-4 py-3 text-sm font-bold text-white shadow transition-opacity hover:opacity-90 dark:bg-white dark:text-slate-900">
                 <span class="material-symbols-outlined text-[18px]">lock</span>
-                閲覧を申請する
+                お問い合わせ
               </button>
             </div>
           </div>

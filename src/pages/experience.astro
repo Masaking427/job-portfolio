@@ -7,59 +7,83 @@ const experiences = [
   {
     icon: 'work',
     iconClass: 'border-primary text-primary dark:border-primary',
-    role: 'シニアプロダクトデザイナー',
-    company: 'TechFlow',
+    role: 'プロダクトプランナー',
+    company: '株式会社SIGNATE',
     companyClass: 'text-primary',
     badge: '在籍中',
-    period: '2022年1月 - 現在',
-    location: 'San Francisco, CA (Hybrid)',
-    skills: ['Design Systems', 'UX Research', 'Figma', 'Agile'],
+    period: '2023年10月 - 現在',
+    skills: ['KPI設計', 'SQL', 'Looker Studio', 'BigQuery', 'UI/UX企画', 'コンテンツ企画'],
     challenge:
-      '既存オンボーディングで離脱率が40%に達し、売上機会の損失が発生。利用開始5分以内に、主要価値が伝わらないという声が多数ありました。',
+      '初心者向けプログラムの継続率が低く、契約継続率にも影響。先行指標として設定した学習プログラムクリア率は12%に留まっていました。',
     actions: [
-      '20名以上のユーザーインタビューを実施し、ボトルネックを特定。',
-      '部門横断ワークショップを主導し、最短で価値体験に到達するユーザージャーニーを再設計。',
-      'A/Bテスト向けにオンボーディング導線を3案プロトタイプ化。',
+      'SQLによる行動ログ分析で、平均テスト受験回数が1.1回と低いボトルネックを特定。',
+      '離脱ユーザーへのヒアリングと行動観察を実施し、心理的ハードルと操作誤解の2つのペインを特定。',
+      '評価基準を2段階化し、各講座視聴直後に受験導線を出すUI改善を実装。',
     ],
     result:
-      'リリース後のQ3で解約率を15%改善。新導線によりユーザー活性化率が22%向上し、推定$1.2MのARR増加に貢献。',
+      'クリア率を12%から22%へ改善し、平均テスト受験回数を2.6回まで向上。契約継続企業比率62.5%から65.0%への改善と、前年比約1,420万円相当の売上増に貢献。',
   },
   {
-    icon: 'design_services',
+    icon: 'school',
     iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
-    role: 'プロダクトデザイナー',
-    company: 'Creative Solutions',
+    role: 'PL/PM・エンジニア',
+    company: 'フォーサイト株式会社',
     companyClass: 'text-slate-600 dark:text-slate-300',
-    period: '2019年6月 - 2021年12月',
-    location: 'Austin, TX',
-    skills: ['UI Design', 'Prototyping', 'Client Management'],
+    period: '2021年4月 - 2023年9月',
+    skills: ['PM', 'PL', 'UXリサーチ', '要件定義', 'Laravel', 'Vue.js'],
     challenge:
-      'Fintechスタートアップ案件で、3カ月という短期間でモバイルアプリMVPが必要な状況。ブランド定義とユーザー調査が未整備でした。',
+      'BtoC学習アプリでは学習フローと画面導線の不一致が発生し、チェックテスト回答率が低下。BtoB向けでは学習進捗の可視化不足が解約要因になっていました。',
     actions: [
-      'モジュール型Design Systemを立ち上げ、設計・実装速度を向上。',
-      '週次レビューを運営し、MVP必須機能と将来機能の優先順位を整理。',
+      'ManaBunの導線を機能軸から科目軸へ再設計し、授業連続再生機能を追加。',
+      'BtoB学習管理システムで、理解度を可視化する管理画面と追試機能を新規設計・実装。',
+      'DB変更が必要な改修とUI改修を分離し、段階リリースで工数とリスクを最適化。',
     ],
     result:
-      '予定通りMVPをリリースし、クライアントのSeries A（$5M）調達に寄与。公開後6カ月間、App Store評価4.8を維持。',
+      'BtoCでチェックテスト回答数を1.18倍、主要資格の合格率を75%から76.1%へ改善。BtoBで学習者合格率を前年比12%改善し、新規契約数を前期比+5社増加。',
   },
   {
     icon: 'terminal',
     iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
-    role: 'ジュニアUXデザイナー',
-    company: 'StartUp Inc',
+    role: 'フルスタックエンジニア',
+    company: 'Lotus and Company.inc',
     companyClass: 'text-slate-600 dark:text-slate-300',
-    period: '2017年5月 - 2019年5月',
-    location: 'New York, NY',
-    skills: ['Wireframing', 'User Testing', 'HTML/CSS'],
+    period: '2020年4月 - 2021年3月',
+    skills: ['Laravel', 'Vue.js', 'GCP', 'パフォーマンス改善', 'API連携'],
     challenge:
-      '社内ダッシュボードの操作効率が低く、サポートチームのチケット対応時間が必要以上に30%増加していました。',
+      'シニア向けSNSサービスで表示速度が低く、ユーザー体験に影響。加えてキャンペーン申込ではセキュリティを担保した連携設計が必要でした。',
     actions: [
-      '現行業務フローを可視化し、冗長ステップを特定。',
-      '情報設計を見直し、優先情報に素早く到達できるUIへ再設計。',
+      '画像遅延ロード、JS分割ロード、LP静的レンダリング、GCFによるWebP変換を導入。',
+      'SSO導入とAPI連携を設計し、セキュリティリスクを考慮した実装を実施。',
     ],
     result:
-      'チケット解決時間を25%短縮し、同年度は増員なしで問い合わせ増加に対応可能な体制を実現。',
+      'Google PageSpeed Insightsスコアを16から60へ改善し、ロード時間を短縮。安全性と利便性を両立した申込基盤を構築。',
   },
+  {
+    icon: 'apartment',
+    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
+    role: '総務・社内IT担当',
+    company: '株式会社山下電気',
+    companyClass: 'text-slate-600 dark:text-slate-300',
+    period: '2019年4月 - 2020年3月',
+    skills: ['社内IT環境整備', 'Google Analytics', '採用業務', 'ヘルプデスク'],
+    challenge:
+      '社内デバイス管理がアナログ運用で、業務効率と情報管理の精度に課題。Web運用ではアクセスデータの活用が十分に進んでいませんでした。',
+    actions: [
+      '社内デバイス所在管理システムを設計・開発し、業務をデジタル化。',
+      'Google Analyticsで月次分析を行い、ページ別推移に対する改善提案を実施。',
+      '採用業務と社内サポートを横断し、日常業務の安定運用を支援。',
+    ],
+    result:
+      '総務部門の運用工数削減と、データに基づくWeb運用の土台構築に貢献。複数業務を並行する運用体制の安定化を実現。',
+  },
+];
+
+const educationHistory = [
+  { period: '2010年4月', detail: '東京経済大学 経営学部 会計学科 入学' },
+  { period: '2015年3月', detail: '東京経済大学 経営学部 会計学科 卒業' },
+  { period: '2015年4月', detail: '国際基督教大学 教養学部 アーツ&サイエンス学科 入学' },
+  { period: '2017年6月', detail: 'Petra Christian University 留学' },
+  { period: '2019年3月', detail: '国際基督教大学 教養学部 アーツ&サイエンス学科 卒業' },
 ];
 ---
 
@@ -74,8 +98,8 @@ const experiences = [
       <div class="mb-16 space-y-4">
         <h2 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">職務経歴</h2>
         <p class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-          7年以上にわたり、拡張性の高いデジタルプロダクト設計、Design Systemの推進、
-          そしてユーザー課題と事業目標をつなぐ改善を継続してきました。
+          KPI策定・データ分析・ユーザーリサーチ・UI/UX企画・コンテンツ企画・要件定義までを一気通貫で担当。
+          エンジニアリング経験を土台に、事業KPIに直結する改善を推進してきました。
         </p>
       </div>
 
@@ -103,7 +127,6 @@ const experiences = [
                       </span>
                     )}
                     <span class="text-sm text-slate-500 dark:text-slate-400">{item.period}</span>
-                    <span class="text-xs text-slate-400 dark:text-slate-500">{item.location}</span>
                   </div>
                 </div>
 
@@ -176,15 +199,16 @@ const experiences = [
           </div>
           <div class="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-[#15202b]">
             <h3 class="mb-4 text-xl font-bold text-slate-900 dark:text-white">学歴</h3>
-            <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">インタラクションデザイン学士</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">University of Arts &amp; Design</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <p class="text-sm text-slate-500 dark:text-slate-400">2013 - 2017</p>
-              </div>
-            </div>
+            <ul class="space-y-3">
+              {
+                educationHistory.map((item) => (
+                  <li class="flex flex-col gap-1 border-b border-slate-200 pb-3 text-sm last:border-none last:pb-0 dark:border-slate-700">
+                    <span class="font-semibold text-slate-700 dark:text-slate-200">{item.period}</span>
+                    <span class="text-slate-600 dark:text-slate-400">{item.detail}</span>
+                  </li>
+                ))
+              }
+            </ul>
           </div>
         </section>
       </div>

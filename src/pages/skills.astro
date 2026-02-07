@@ -5,56 +5,63 @@ import SiteHeader from '../components/SiteHeader.astro';
 
 const skillGroups = [
   {
-    title: 'フロントエンド開発',
-    icon: 'web',
+    title: 'プロダクト企画・分析',
+    icon: 'analytics',
     items: [
-      { name: 'React & React Native', level: '上級', width: 95, primary: true },
-      { name: 'TypeScript', level: '上級', width: 90, primary: true },
-      { name: 'Tailwind CSS / SCSS', level: 'エキスパート', width: 98, primary: true },
-      { name: 'Next.js', level: '中級', width: 75 },
+      { name: 'KPI設計・モニタリング', level: '上級', width: 95, primary: true },
+      { name: 'SQL・行動ログ分析', level: '上級', width: 92, primary: true },
+      { name: 'ユーザーインタビュー・テスト', level: '上級', width: 90, primary: true },
+      { name: 'Instructional Design', level: '中級', width: 76 },
     ],
   },
   {
-    title: 'バックエンド・インフラ',
-    icon: 'database',
+    title: '開発・実装',
+    icon: 'code',
     items: [
-      { name: 'Node.js / Express', level: '上級', width: 85, primary: true },
-      { name: 'PostgreSQL', level: '中級', width: 70 },
-      { name: 'Docker & Kubernetes', level: '実務経験あり', width: 50 },
-      { name: 'AWS Services', level: '中級', width: 65 },
+      { name: 'Laravel・Vue.js', level: '中級', width: 72, primary: true },
+      { name: 'AWS・GCP', level: '中級', width: 68 },
+      { name: 'Figma Make', level: '上級', width: 88, primary: true },
+      { name: 'UI/UX設計・要件定義', level: '上級', width: 90, primary: true },
     ],
   },
 ];
 
 const toolBadges = [
-  { icon: 'flutter', name: 'Figma' },
-  { icon: 'commit', name: 'Git & GitHub' },
-  { icon: 'task', name: 'Jira' },
-  { icon: 'api', name: 'Postman' },
-  { icon: 'monitor', name: 'VS Code' },
-  { icon: 'terminal', name: 'Bash/Zsh' },
-  { icon: 'bug_report', name: 'Sentry' },
-  { icon: 'analytics', name: 'Google Analytics' },
+  { icon: 'query_stats', name: 'Looker Studio' },
+  { icon: 'database', name: 'BigQuery' },
+  { icon: 'code', name: 'SQL' },
+  { icon: 'monitoring', name: 'GA4' },
+  { icon: 'category', name: 'Dovetail' },
+  { icon: 'flutter', name: 'Figma Make' },
+  { icon: 'task', name: 'JIRA' },
+  { icon: 'inventory', name: 'Backlog' },
+  { icon: 'support_agent', name: 'Zendesk' },
+  { icon: 'smart_toy', name: 'Dify' },
+  { icon: 'chat', name: 'Slack' },
+  { icon: 'terminal', name: 'Laravel' },
+  { icon: 'web', name: 'Vue.js' },
+  { icon: 'cloud', name: 'AWS' },
+  { icon: 'cloud_sync', name: 'GCP' },
 ];
 
 const mindsetCards = [
   {
-    icon: 'lightbulb',
-    title: '課題解決を最優先',
+    icon: 'route',
+    title: '課題定義を先に行う',
     description:
-      '課題は必ず分解して構造化し、表面的な修正ではなく根本原因に向き合います。短期対応と中長期の拡張性を両立する設計を重視しています。',
+      '要望をそのまま機能化せず、定量・定性データから本質課題を定義してから施策化します。仮説の精度を上げ、無駄な開発を減らします。',
   },
   {
-    icon: 'forum',
-    title: '明確なコミュニケーション',
+    icon: 'cycle',
+    title: '高速な仮説検証',
     description:
-      'ドキュメント作成から技術的負債の説明まで、常に「伝わること」を優先します。透明性の高い共有と先回りの報連相が、成果につながると考えています。',
+      '施策実行後は必ず効果検証を行い、次の改善に接続します。PDCAを短いスパンで回し、KPI改善を継続的に積み上げます。',
   },
   {
-    icon: 'trending_up',
-    title: '継続的な成長',
+    icon: 'groups',
+    title: '部門横断の推進力',
     description:
-      '技術トレンドの変化に追従するため、毎週学習時間を確保し、新しいフレームワークや設計パターンを検証しています。常に実務で使える形でアップデートします。',
+      'ビジネス、エンジニア、デザイナー、コンテンツ担当をつなぎ、共通指標で意思決定します。実装可能性と事業インパクトを両立させます。',
   },
 ];
 ---
@@ -73,7 +80,7 @@ const mindsetCards = [
             スキルと専門性
           </h1>
           <p class="max-w-2xl text-lg font-normal leading-relaxed text-slate-500 dark:text-slate-400 md:text-xl">
-            5年以上の実務で培った技術力、ツール活用力、そして仕事への向き合い方をまとめています。
+            プロダクト企画から分析、要件定義、実装までを一気通貫で推進するための実務スキルを整理しています。
           </p>
         </div>
 
