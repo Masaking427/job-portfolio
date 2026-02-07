@@ -1,0 +1,17 @@
+---
+interface Props {
+  className?: string;
+  containerClass?: string;
+  contentClass?: string;
+}
+
+const { className = '', containerClass = '', contentClass = '' } = Astro.props;
+---
+
+<header class={`sticky top-0 z-50 ${className}`.trim()}>
+  <div class={containerClass}>
+    <div class={contentClass}>
+      <slot />
+    </div>
+  </div>
+</header>

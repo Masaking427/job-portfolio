@@ -1,0 +1,36 @@
+---
+interface NavItem {
+  label: string;
+  href?: string;
+  active?: boolean;
+}
+
+interface Props {
+  items: NavItem[];
+  navClass?: string;
+  linkClass?: string;
+  activeClass?: string;
+  inactiveClass?: string;
+}
+
+const {
+  items,
+  navClass = '',
+  linkClass = '',
+  activeClass = '',
+  inactiveClass = '',
+} = Astro.props;
+---
+
+<nav class={navClass}>
+  {
+    items.map((item) => (
+      <a
+        class={`${linkClass} ${item.active ? activeClass : inactiveClass}`.trim()}
+        href={item.href ?? '#'}
+      >
+        {item.label}
+      </a>
+    ))
+  }
+</nav>

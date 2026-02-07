@@ -14,6 +14,19 @@
 - `/experience` : professional experience details
 - `/skills` : skills and professional mindset
 
+## Source files (`src/`)
+
+- `src/components/BrandIdentity.astro` : ブランド表示（アイコン、名前、肩書き）を描画する共通UI。
+- `src/components/FooterSection.astro` : フッターの外枠レイアウトを共通化するコンポーネント。
+- `src/components/NavLinks.astro` : ナビゲーションリンク群を配列から描画する共通コンポーネント。
+- `src/components/SocialLinks.astro` : SNS/外部リンク群を配列から描画する共通コンポーネント。
+- `src/components/StickyHeader.astro` : 固定ヘッダーの外枠レイアウトを共通化するコンポーネント。
+- `src/layouts/BaseLayout.astro` : 全ページ共通のHTML骨格（`<head>`、フォント、`<body>`）を提供するレイアウト。
+- `src/pages/index.astro` : トップページ（概要、強み、経歴サマリー、実績）を表示するルート。
+- `src/pages/experience.astro` : 職務経歴の詳細ページ（タイムライン形式）。
+- `src/pages/skills.astro` : スキル・マインドセットの詳細ページ。
+- `src/styles/global.css` : Tailwind読み込みと全体共通スタイル（スクロールバー、タイムライン補助など）。
+
 ## Local development
 
 Node.js 20 LTS is required.

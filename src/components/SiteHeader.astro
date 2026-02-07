@@ -1,0 +1,53 @@
+---
+import BrandIdentity from './BrandIdentity.astro';
+import NavLinks from './NavLinks.astro';
+import StickyHeader from './StickyHeader.astro';
+
+interface Props {
+  currentPath: '/' | '/experience' | '/skills';
+}
+
+const { currentPath } = Astro.props;
+
+const tabs = [
+  { label: 'Home', href: '/' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'Skills', href: '/skills' },
+].map((tab) => ({
+  ...tab,
+  active:
+    currentPath === tab.href ||
+    (currentPath.startsWith(`${tab.href}/`) && tab.href !== '/'),
+}));
+---
+
+<StickyHeader
+  className="w-full border-b border-slate-200 bg-white/80 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80"
+  containerClass="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+  contentClass="flex h-16 items-center justify-between"
+>
+  <BrandIdentity
+    icon="design_services"
+    name="John Doe"
+    wrapperClass="flex items-center gap-3"
+    iconWrapperClass="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white"
+    iconClass="text-[20px]"
+    nameClass="text-lg font-bold tracking-tight text-slate-900 dark:text-white"
+  />
+
+  <NavLinks
+    items={tabs}
+    navClass="flex items-center gap-4 sm:gap-8"
+    linkClass="text-xs font-medium transition-colors hover:text-primary sm:text-sm dark:hover:text-primary"
+    activeClass="text-primary"
+    inactiveClass="text-slate-600 dark:text-slate-400"
+  />
+
+  <a
+    href="#"
+    class="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/90"
+  >
+    <span class="material-symbols-outlined text-[18px]">download</span>
+    <span class="hidden sm:inline">Download Resume</span>
+  </a>
+</StickyHeader>

@@ -1,0 +1,24 @@
+---
+interface LinkItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  links: LinkItem[];
+  containerClass?: string;
+  linkClass?: string;
+}
+
+const { links, containerClass = '', linkClass = '' } = Astro.props;
+---
+
+<div class={containerClass}>
+  {
+    links.map((link) => (
+      <a class={linkClass} href={link.href ?? '#'}>
+        {link.label}
+      </a>
+    ))
+  }
+</div>
