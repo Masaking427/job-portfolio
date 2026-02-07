@@ -5,62 +5,69 @@ import SiteHeader from '../components/SiteHeader.astro';
 
 const skillGroups = [
   {
-    title: 'Frontend Development',
-    icon: 'web',
+    title: 'プロダクト企画・分析',
+    icon: 'analytics',
     items: [
-      { name: 'React & React Native', level: 'Advanced', width: 95, primary: true },
-      { name: 'TypeScript', level: 'Advanced', width: 90, primary: true },
-      { name: 'Tailwind CSS / SCSS', level: 'Expert', width: 98, primary: true },
-      { name: 'Next.js', level: 'Intermediate', width: 75 },
+      { name: 'KPI設計・モニタリング', level: '上級', width: 95, primary: true },
+      { name: 'SQL・行動ログ分析', level: '上級', width: 92, primary: true },
+      { name: 'ユーザーインタビュー・テスト', level: '上級', width: 90, primary: true },
+      { name: 'Instructional Design', level: '中級', width: 76 },
     ],
   },
   {
-    title: 'Backend & Infrastructure',
-    icon: 'database',
+    title: '開発・実装',
+    icon: 'code',
     items: [
-      { name: 'Node.js / Express', level: 'Advanced', width: 85, primary: true },
-      { name: 'PostgreSQL', level: 'Intermediate', width: 70 },
-      { name: 'Docker & Kubernetes', level: 'Working Knowledge', width: 50 },
-      { name: 'AWS Services', level: 'Intermediate', width: 65 },
+      { name: 'Laravel・Vue.js', level: '中級', width: 72, primary: true },
+      { name: 'AWS・GCP', level: '中級', width: 68 },
+      { name: 'Figma Make', level: '上級', width: 88, primary: true },
+      { name: 'UI/UX設計・要件定義', level: '上級', width: 90, primary: true },
     ],
   },
 ];
 
 const toolBadges = [
-  { icon: 'flutter', name: 'Figma' },
-  { icon: 'commit', name: 'Git & GitHub' },
-  { icon: 'task', name: 'Jira' },
-  { icon: 'api', name: 'Postman' },
-  { icon: 'monitor', name: 'VS Code' },
-  { icon: 'terminal', name: 'Bash/Zsh' },
-  { icon: 'bug_report', name: 'Sentry' },
-  { icon: 'analytics', name: 'Google Analytics' },
+  { icon: 'query_stats', name: 'Looker Studio' },
+  { icon: 'database', name: 'BigQuery' },
+  { icon: 'code', name: 'SQL' },
+  { icon: 'monitoring', name: 'GA4' },
+  { icon: 'category', name: 'Dovetail' },
+  { icon: 'flutter', name: 'Figma Make' },
+  { icon: 'task', name: 'JIRA' },
+  { icon: 'inventory', name: 'Backlog' },
+  { icon: 'support_agent', name: 'Zendesk' },
+  { icon: 'smart_toy', name: 'Dify' },
+  { icon: 'chat', name: 'Slack' },
+  { icon: 'terminal', name: 'Laravel' },
+  { icon: 'web', name: 'Vue.js' },
+  { icon: 'cloud', name: 'AWS' },
+  { icon: 'cloud_sync', name: 'GCP' },
 ];
 
 const mindsetCards = [
   {
-    icon: 'lightbulb',
-    title: 'Problem Solving First',
+    icon: 'route',
+    title: '課題定義を先に行う',
     description:
-      "I approach every challenge by breaking it down into manageable components. My goal isn't just to patch the bug, but to understand the root cause and architect a scalable, long-term solution.",
+      '要望をそのまま機能化せず、定量・定性データから本質課題を定義してから施策化します。仮説の精度を上げ、無駄な開発を減らします。',
   },
   {
-    icon: 'forum',
-    title: 'Clear Communication',
+    icon: 'cycle',
+    title: '高速な仮説検証',
     description:
-      'Whether writing documentation or explaining technical debt to stakeholders, I prioritize clarity. I believe transparency and proactive updates are the backbone of successful remote collaboration.',
+      '施策実行後は必ず効果検証を行い、次の改善に接続します。PDCAを短いスパンで回し、KPI改善を継続的に積み上げます。',
   },
   {
-    icon: 'trending_up',
-    title: 'Continuous Growth',
+    icon: 'groups',
+    title: '部門横断の推進力',
     description:
-      'The tech landscape never stands still, and neither do I. I dedicate time weekly to exploring new frameworks, patterns, and best practices to ensure my toolkit remains modern and effective.',
+      'ビジネス、エンジニア、デザイナー、コンテンツ担当をつなぎ、共通指標で意思決定します。実装可能性と事業インパクトを両立させます。',
   },
 ];
 ---
 
 <BaseLayout
-  title="Skills and Mindset"
+  title="スキルと仕事観"
   bodyClass="bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-200 font-display transition-colors duration-200"
 >
   <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
@@ -70,11 +77,10 @@ const mindsetCards = [
       <div class="flex w-full max-w-5xl flex-col gap-12">
         <div class="flex flex-col gap-4 text-center md:text-left">
           <h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-slate-900 dark:text-white md:text-5xl">
-            Skills &amp; Expertise
+            スキルと専門性
           </h1>
           <p class="max-w-2xl text-lg font-normal leading-relaxed text-slate-500 dark:text-slate-400 md:text-xl">
-            A comprehensive overview of my technical abilities, tool proficiency, and professional philosophy developed
-            over 5+ years in the industry.
+            プロダクト企画から分析、要件定義、実装までを一気通貫で推進するための実務スキルを整理しています。
           </p>
         </div>
 
@@ -82,7 +88,7 @@ const mindsetCards = [
           <div class="flex items-center justify-between border-b border-slate-200 pb-4 dark:border-slate-800">
             <h2 class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
               <span class="material-symbols-outlined text-primary">terminal</span>
-              Tech Stack &amp; Tools
+              技術スタックとツール
             </h2>
           </div>
 
@@ -122,7 +128,7 @@ const mindsetCards = [
               <div class="rounded-xl border border-slate-100 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <h3 class="mb-4 flex items-center gap-2 text-lg font-bold text-slate-800 dark:text-slate-200">
                   <span class="material-symbols-outlined text-sm text-primary">build</span>
-                  Tools &amp; Workflow
+                  ツール・ワークフロー
                 </h3>
                 <div class="flex flex-wrap gap-2">
                   {
@@ -147,7 +153,7 @@ const mindsetCards = [
           <div class="flex items-center justify-between border-b border-slate-200 pb-4 dark:border-slate-800">
             <h2 class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
               <span class="material-symbols-outlined text-primary">psychology</span>
-              Professional Mindset
+              仕事観
             </h2>
           </div>
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
