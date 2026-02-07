@@ -1,23 +1,23 @@
 ---
-import BrandIdentity from './BrandIdentity.astro';
-import NavLinks from './NavLinks.astro';
-import StickyHeader from './StickyHeader.astro';
+import BrandIdentity from "./BrandIdentity.astro";
+import NavLinks from "./NavLinks.astro";
+import StickyHeader from "./StickyHeader.astro";
 
 interface Props {
-  currentPath: '/' | '/experience' | '/skills';
+  currentPath: "/" | "/experience" | "/skills";
 }
 
 const { currentPath } = Astro.props;
 
 const tabs = [
-  { label: 'Home', href: '/' },
-  { label: 'Experience', href: '/experience' },
-  { label: 'Skills', href: '/skills' },
+  { label: "Home", href: "/" },
+  { label: "Experience", href: "/experience" },
+  { label: "Skills", href: "/skills" },
 ].map((tab) => ({
   ...tab,
   active:
     currentPath === tab.href ||
-    (currentPath.startsWith(`${tab.href}/`) && tab.href !== '/'),
+    (currentPath.startsWith(`${tab.href}/`) && tab.href !== "/"),
 }));
 ---
 
@@ -28,7 +28,7 @@ const tabs = [
 >
   <BrandIdentity
     icon="design_services"
-    name="John Doe"
+    name="Resume"
     wrapperClass="flex items-center gap-3"
     iconWrapperClass="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white"
     iconClass="text-[20px]"

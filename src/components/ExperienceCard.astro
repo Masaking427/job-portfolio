@@ -1,22 +1,5 @@
 ---
-type ExperienceItem = {
-  icon: string;
-  iconClass: string;
-  role: string;
-  company: string;
-  companyClass: string;
-  badge?: string;
-  period: string;
-  summaryLine: string;
-  skills: string[];
-  challenge: string | string[];
-  actions: string[];
-  result: string | string[];
-  product?: {
-    name: string;
-    url: string;
-  };
-};
+import type { ExperienceItem } from "../data/types";
 
 interface Props {
   item: ExperienceItem;
