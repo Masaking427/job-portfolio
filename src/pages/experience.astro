@@ -1,315 +1,195 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+const experiences = [
+  {
+    icon: 'work',
+    iconClass: 'border-primary text-primary dark:border-primary',
+    role: 'シニアプロダクトデザイナー',
+    company: 'TechFlow',
+    companyClass: 'text-primary',
+    badge: '在籍中',
+    period: '2022年1月 - 現在',
+    location: 'San Francisco, CA (Hybrid)',
+    skills: ['Design Systems', 'UX Research', 'Figma', 'Agile'],
+    challenge:
+      '既存オンボーディングで離脱率が40%に達し、売上機会の損失が発生。利用開始5分以内に、主要価値が伝わらないという声が多数ありました。',
+    actions: [
+      '20名以上のユーザーインタビューを実施し、ボトルネックを特定。',
+      '部門横断ワークショップを主導し、最短で価値体験に到達するユーザージャーニーを再設計。',
+      'A/Bテスト向けにオンボーディング導線を3案プロトタイプ化。',
+    ],
+    result:
+      'リリース後のQ3で解約率を15%改善。新導線によりユーザー活性化率が22%向上し、推定$1.2MのARR増加に貢献。',
+  },
+  {
+    icon: 'design_services',
+    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
+    role: 'プロダクトデザイナー',
+    company: 'Creative Solutions',
+    companyClass: 'text-slate-600 dark:text-slate-300',
+    period: '2019年6月 - 2021年12月',
+    location: 'Austin, TX',
+    skills: ['UI Design', 'Prototyping', 'Client Management'],
+    challenge:
+      'Fintechスタートアップ案件で、3カ月という短期間でモバイルアプリMVPが必要な状況。ブランド定義とユーザー調査が未整備でした。',
+    actions: [
+      'モジュール型Design Systemを立ち上げ、設計・実装速度を向上。',
+      '週次レビューを運営し、MVP必須機能と将来機能の優先順位を整理。',
+    ],
+    result:
+      '予定通りMVPをリリースし、クライアントのSeries A（$5M）調達に寄与。公開後6カ月間、App Store評価4.8を維持。',
+  },
+  {
+    icon: 'terminal',
+    iconClass: 'border-slate-200 text-slate-400 dark:border-slate-700',
+    role: 'ジュニアUXデザイナー',
+    company: 'StartUp Inc',
+    companyClass: 'text-slate-600 dark:text-slate-300',
+    period: '2017年5月 - 2019年5月',
+    location: 'New York, NY',
+    skills: ['Wireframing', 'User Testing', 'HTML/CSS'],
+    challenge:
+      '社内ダッシュボードの操作効率が低く、サポートチームのチケット対応時間が必要以上に30%増加していました。',
+    actions: [
+      '現行業務フローを可視化し、冗長ステップを特定。',
+      '情報設計を見直し、優先情報に素早く到達できるUIへ再設計。',
+    ],
+    result:
+      'チケット解決時間を25%短縮し、同年度は増員なしで問い合わせ増加に対応可能な体制を実現。',
+  },
+];
 ---
 
-<BaseLayout title="Professional Experience" bodyClass="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
-<!-- Navbar -->
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#101922]/80 backdrop-blur-md px-6 py-4">
-<div class="mx-auto flex max-w-6xl items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
-<span class="material-symbols-outlined">person</span>
-</div>
-<div>
-<h1 class="text-lg font-bold leading-tight tracking-tight text-slate-900 dark:text-white">John Doe</h1>
-<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Senior Product Designer</p>
-</div>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#">About</a>
-<a class="text-sm font-bold text-primary" href="#">Experience</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#">Projects</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#">Contact</a>
-</nav>
-<button class="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-blue-600 transition-colors">
-<span class="material-symbols-outlined text-[18px]">download</span>
-<span class="hidden sm:inline">Download Resume</span>
-</button>
-</div>
-</header>
-<!-- Main Content -->
-<main class="flex-grow w-full px-4 py-12 md:px-8 lg:px-12">
-<div class="mx-auto max-w-4xl">
-<!-- Page Header -->
-<div class="mb-16 space-y-4">
-<h2 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">Professional Experience</h2>
-<p class="max-w-2xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    A deep dive into my career journey. Over 7 years of designing scalable digital products, leading design systems, and bridging the gap between user needs and business goals.
-                </p>
-</div>
-<!-- Timeline Container -->
-<div class="relative space-y-12">
-<!-- Job Entry 1 -->
-<div class="relative pl-0 md:pl-20 timeline-line">
-<!-- Timeline Node (Desktop) -->
-<div class="absolute left-0 top-1 hidden h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-primary text-primary shadow-sm md:flex z-10 dark:bg-slate-800 dark:border-primary">
-<span class="material-symbols-outlined text-2xl">work</span>
-</div>
-<!-- Content Card -->
-<div class="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-slate-800 dark:bg-[#15202b]">
-<!-- Role Header -->
-<div class="mb-6 flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 dark:border-slate-700 sm:flex-row sm:items-start">
-<div>
-<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Senior Product Designer</h3>
-<div class="mt-1 flex items-center gap-2 text-primary font-medium">
-<span class="material-symbols-outlined text-[18px]">business</span>
-<span>TechFlow</span>
-</div>
-</div>
-<div class="flex flex-col items-start gap-1 sm:items-end">
-<span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary dark:bg-primary/20">Present</span>
-<span class="text-sm text-slate-500 dark:text-slate-400">Jan 2022 - Present</span>
-<span class="text-xs text-slate-400 dark:text-slate-500">San Francisco, CA (Hybrid)</span>
-</div>
-</div>
-<!-- Skills Tags -->
-<div class="mb-8 flex flex-wrap gap-2">
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Design Systems</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">UX Research</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Figma</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Agile</span>
-</div>
-<!-- STAR Method Content -->
-<div class="space-y-8">
-<!-- Challenge -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
-<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">The Challenge</h4>
-<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-                                        The legacy onboarding flow was suffering from a 40% drop-off rate, causing significant revenue loss. Users reported confusion around key value propositions during the first 5 minutes of usage.
-                                    </p>
-</div>
-</div>
-<!-- Actions -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-<span class="material-symbols-outlined text-[16px]">construction</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">Actions Taken</h4>
-<ul class="list-none space-y-2 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Conducted 20+ user interviews to identify friction points.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Led a cross-functional workshop to map out a streamlined user journey.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Designed and prototyped 3 variations of the onboarding wizard for A/B testing.</span>
-</li>
-</ul>
-</div>
-</div>
-<!-- Results -->
-<div class="rounded-lg bg-green-50 p-5 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30">
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
-<span class="material-symbols-outlined text-[16px]">trending_up</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-green-800 dark:text-green-400">Results &amp; Impact</h4>
-<p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                                            Successfully reduced churn by <strong class="text-green-700 dark:text-green-400">15%</strong> within Q3 following the release. The new flow increased user activation by <strong class="text-green-700 dark:text-green-400">22%</strong>, directly contributing to an estimated $1.2M in annual recurring revenue.
-                                        </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Job Entry 2 -->
-<div class="relative pl-0 md:pl-20 timeline-line">
-<!-- Timeline Node (Desktop) -->
-<div class="absolute left-0 top-1 hidden h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-slate-200 text-slate-400 shadow-sm md:flex z-10 dark:bg-slate-800 dark:border-slate-700">
-<span class="material-symbols-outlined text-2xl">design_services</span>
-</div>
-<!-- Content Card -->
-<div class="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-slate-800 dark:bg-[#15202b]">
-<!-- Role Header -->
-<div class="mb-6 flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 dark:border-slate-700 sm:flex-row sm:items-start">
-<div>
-<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Product Designer</h3>
-<div class="mt-1 flex items-center gap-2 text-slate-600 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-[18px]">business</span>
-<span>Creative Solutions</span>
-</div>
-</div>
-<div class="flex flex-col items-start gap-1 sm:items-end">
-<span class="text-sm text-slate-500 dark:text-slate-400">Jun 2019 - Dec 2021</span>
-<span class="text-xs text-slate-400 dark:text-slate-500">Austin, TX</span>
-</div>
-</div>
-<!-- Skills Tags -->
-<div class="mb-8 flex flex-wrap gap-2">
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">UI Design</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Prototyping</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Client Management</span>
-</div>
-<!-- STAR Method Content -->
-<div class="space-y-8">
-<!-- Challenge -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
-<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">The Challenge</h4>
-<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-                                        The client, a fintech startup, needed a mobile app MVP within a tight 3-month deadline. They lacked a defined brand identity and user research data.
-                                    </p>
-</div>
-</div>
-<!-- Actions -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-<span class="material-symbols-outlined text-[16px]">construction</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">Actions Taken</h4>
-<ul class="list-none space-y-2 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Established a modular design system to accelerate development.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Facilitated weekly stakeholder reviews to align on MVP features vs. "nice-to-haves".</span>
-</li>
-</ul>
-</div>
-</div>
-<!-- Results -->
-<div class="rounded-lg bg-green-50 p-5 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30">
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
-<span class="material-symbols-outlined text-[16px]">trending_up</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-green-800 dark:text-green-400">Results &amp; Impact</h4>
-<p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                                            Launched the MVP on schedule, securing the client's Series A funding of <strong class="text-green-700 dark:text-green-400">$5M</strong>. The app maintained a <strong class="text-green-700 dark:text-green-400">4.8-star</strong> rating on the App Store for its first 6 months.
-                                        </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Job Entry 3 -->
-<div class="relative pl-0 md:pl-20 timeline-line">
-<!-- Timeline Node (Desktop) -->
-<div class="absolute left-0 top-1 hidden h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-slate-200 text-slate-400 shadow-sm md:flex z-10 dark:bg-slate-800 dark:border-slate-700">
-<span class="material-symbols-outlined text-2xl">terminal</span>
-</div>
-<!-- Content Card -->
-<div class="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-slate-800 dark:bg-[#15202b]">
-<!-- Role Header -->
-<div class="mb-6 flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 dark:border-slate-700 sm:flex-row sm:items-start">
-<div>
-<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Junior UX Designer</h3>
-<div class="mt-1 flex items-center gap-2 text-slate-600 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-[18px]">business</span>
-<span>StartUp Inc</span>
-</div>
-</div>
-<div class="flex flex-col items-start gap-1 sm:items-end">
-<span class="text-sm text-slate-500 dark:text-slate-400">May 2017 - May 2019</span>
-<span class="text-xs text-slate-400 dark:text-slate-500">New York, NY</span>
-</div>
-</div>
-<!-- Skills Tags -->
-<div class="mb-8 flex flex-wrap gap-2">
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">Wireframing</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">User Testing</span>
-<span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">HTML/CSS</span>
-</div>
-<!-- STAR Method Content -->
-<div class="space-y-8">
-<!-- Challenge -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
-<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">The Challenge</h4>
-<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-                                        The company's internal dashboard tool was inefficient, leading to support teams spending 30% more time on tickets than necessary.
-                                    </p>
-</div>
-</div>
-<!-- Actions -->
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-<span class="material-symbols-outlined text-[16px]">construction</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">Actions Taken</h4>
-<ul class="list-none space-y-2 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Mapped current workflows and identified redundant steps.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
-<span>Redesigned the dashboard interface focusing on information hierarchy.</span>
-</li>
-</ul>
-</div>
-</div>
-<!-- Results -->
-<div class="rounded-lg bg-green-50 p-5 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30">
-<div class="grid grid-cols-[24px_1fr] gap-4">
-<div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
-<span class="material-symbols-outlined text-[16px]">trending_up</span>
-</div>
-<div>
-<h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-green-800 dark:text-green-400">Results &amp; Impact</h4>
-<p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                                            Reduced ticket resolution time by <strong class="text-green-700 dark:text-green-400">25%</strong>, allowing the support team to handle increased volume without additional hiring for that fiscal year.
-                                        </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Education Section -->
-<div class="relative pl-0 md:pl-20">
-<!-- Timeline Node (Desktop) -->
-<div class="absolute left-0 top-1 hidden h-14 w-14 items-center justify-center rounded-full bg-white border-2 border-slate-200 text-slate-400 shadow-sm md:flex z-10 dark:bg-slate-800 dark:border-slate-700">
-<span class="material-symbols-outlined text-2xl">school</span>
-</div>
-<div class="mt-12 rounded-xl bg-slate-50 p-6 dark:bg-[#15202b] border border-slate-200 dark:border-slate-800">
-<h3 class="mb-4 text-xl font-bold text-slate-900 dark:text-white">Education</h3>
-<div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-<div>
-<p class="font-bold text-slate-900 dark:text-white">B.F.A in Interaction Design</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">University of Arts &amp; Design</p>
-</div>
-<div class="text-left sm:text-right">
-<p class="text-sm text-slate-500 dark:text-slate-400">2013 - 2017</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Simple Footer -->
-<footer class="mt-12 border-t border-slate-200 bg-white py-8 dark:bg-[#101922] dark:border-slate-800">
-<div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
-<p class="text-sm text-slate-500 dark:text-slate-400">© 2023 John Doe. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">Dribbble</a>
-</div>
-</div>
-</footer>
+<BaseLayout
+  title="職務経歴"
+  bodyClass="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col"
+>
+  <SiteHeader currentPath="/experience" />
+
+  <main class="w-full flex-grow px-4 py-12 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-16 space-y-4">
+        <h2 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">職務経歴</h2>
+        <p class="max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+          7年以上にわたり、拡張性の高いデジタルプロダクト設計、Design Systemの推進、
+          そしてユーザー課題と事業目標をつなぐ改善を継続してきました。
+        </p>
+      </div>
+
+      <div class="relative space-y-12">
+        {
+          experiences.map((item) => (
+            <article class="timeline-line relative pl-0 md:pl-20">
+              <div class={`absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 bg-white shadow-sm md:flex dark:bg-slate-800 ${item.iconClass}`}>
+                <span class="material-symbols-outlined text-2xl">{item.icon}</span>
+              </div>
+
+              <div class="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-slate-800 dark:bg-[#15202b]">
+                <div class="mb-6 flex flex-col justify-between gap-4 border-b border-slate-100 pb-6 dark:border-slate-700 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{item.role}</h3>
+                    <div class={`mt-1 flex items-center gap-2 font-medium ${item.companyClass}`}>
+                      <span class="material-symbols-outlined text-[18px]">business</span>
+                      <span>{item.company}</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-start gap-1 sm:items-end">
+                    {item.badge && (
+                      <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary dark:bg-primary/20">
+                        {item.badge}
+                      </span>
+                    )}
+                    <span class="text-sm text-slate-500 dark:text-slate-400">{item.period}</span>
+                    <span class="text-xs text-slate-400 dark:text-slate-500">{item.location}</span>
+                  </div>
+                </div>
+
+                <div class="mb-8 flex flex-wrap gap-2">
+                  {
+                    item.skills.map((skill) => (
+                      <span class="rounded bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                        {skill}
+                      </span>
+                    ))
+                  }
+                </div>
+
+                <div class="space-y-8">
+                  <div class="grid grid-cols-[24px_1fr] gap-4">
+                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400">
+                      <span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+                    </div>
+                    <div>
+                      <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">
+                        課題
+                      </h4>
+                      <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">{item.challenge}</p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-[24px_1fr] gap-4">
+                    <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                      <span class="material-symbols-outlined text-[16px]">construction</span>
+                    </div>
+                    <div>
+                      <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100">
+                        取り組み
+                      </h4>
+                      <ul class="list-none space-y-2 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                        {
+                          item.actions.map((action) => (
+                            <li class="flex items-start gap-2">
+                              <span class="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>
+                              <span>{action}</span>
+                            </li>
+                          ))
+                        }
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="rounded-lg border border-green-100 bg-green-50 p-5 dark:border-green-900/30 dark:bg-green-900/10">
+                    <div class="grid grid-cols-[24px_1fr] gap-4">
+                      <div class="mt-1 flex h-6 w-6 items-center justify-center rounded bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400">
+                        <span class="material-symbols-outlined text-[16px]">trending_up</span>
+                      </div>
+                      <div>
+                        <h4 class="mb-2 text-sm font-bold uppercase tracking-wider text-green-800 dark:text-green-400">
+                          成果・インパクト
+                        </h4>
+                        <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">{item.result}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+
+        <section class="relative pl-0 md:pl-20">
+          <div class="absolute left-0 top-1 z-10 hidden h-14 w-14 items-center justify-center rounded-full border-2 border-slate-200 bg-white text-slate-400 shadow-sm md:flex dark:border-slate-700 dark:bg-slate-800">
+            <span class="material-symbols-outlined text-2xl">school</span>
+          </div>
+          <div class="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-[#15202b]">
+            <h3 class="mb-4 text-xl font-bold text-slate-900 dark:text-white">学歴</h3>
+            <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
+              <div>
+                <p class="font-bold text-slate-900 dark:text-white">インタラクションデザイン学士</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">University of Arts &amp; Design</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <p class="text-sm text-slate-500 dark:text-slate-400">2013 - 2017</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
 </BaseLayout>

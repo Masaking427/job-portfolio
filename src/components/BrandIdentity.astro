@@ -1,0 +1,33 @@
+---
+interface Props {
+  icon: string;
+  name: string;
+  subtitle?: string;
+  wrapperClass?: string;
+  iconWrapperClass?: string;
+  iconClass?: string;
+  nameClass?: string;
+  subtitleClass?: string;
+}
+
+const {
+  icon,
+  name,
+  subtitle,
+  wrapperClass = '',
+  iconWrapperClass = '',
+  iconClass = '',
+  nameClass = '',
+  subtitleClass = '',
+} = Astro.props;
+---
+
+<div class={wrapperClass}>
+  <div class={iconWrapperClass}>
+    <span class={`material-symbols-outlined ${iconClass}`.trim()}>{icon}</span>
+  </div>
+  <div>
+    <p class={nameClass}>{name}</p>
+    {subtitle && <p class={subtitleClass}>{subtitle}</p>}
+  </div>
+</div>

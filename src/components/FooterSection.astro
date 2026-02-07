@@ -1,0 +1,17 @@
+---
+interface Props {
+  className?: string;
+  containerClass?: string;
+  contentClass?: string;
+}
+
+const { className = '', containerClass = '', contentClass = '' } = Astro.props;
+---
+
+<footer class={className}>
+  <div class={containerClass}>
+    <div class={contentClass}>
+      <slot />
+    </div>
+  </div>
+</footer>
