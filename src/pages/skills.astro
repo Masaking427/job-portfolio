@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Skills and Mindset" bodyClass="bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-200 font-display transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-6 lg:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">code</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white">John Doe</h2>
+</div>
+<div class="flex items-center gap-8 max-md:hidden">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Skills</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Resume</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm hover:shadow-md">
+<span class="truncate flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                        Download Resume
+                    </span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center w-full px-4 sm:px-6 lg:px-8 py-10">
+<div class="max-w-5xl w-full flex flex-col gap-12">
+<!-- Page Header -->
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-slate-900 dark:text-white">
+                        Skills &amp; Expertise
+                    </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
+                        A comprehensive overview of my technical abilities, tool proficiency, and professional philosophy developed over 5+ years in the industry.
+                    </p>
+</div>
+<!-- Section: Tech Stack & Tools (Hard Skills) -->
+<section class="flex flex-col gap-8">
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">terminal</span>
+                            Tech Stack &amp; Tools
+                        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+<!-- Column 1: Frontend (Progress Bars) -->
+<div class="lg:col-span-6 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-6 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">web</span> Frontend Development
+                            </h3>
+<div class="flex flex-col gap-5">
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">React &amp; React Native</span>
+<span class="text-sm font-medium text-primary">Advanced</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 95%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">TypeScript</span>
+<span class="text-sm font-medium text-primary">Advanced</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 90%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Tailwind CSS / SCSS</span>
+<span class="text-sm font-medium text-primary">Expert</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 98%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Next.js</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Intermediate</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: Backend (Progress Bars) -->
+<div class="lg:col-span-6 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-6 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">database</span> Backend &amp; Infrastructure
+                            </h3>
+<div class="flex flex-col gap-5">
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Node.js / Express</span>
+<span class="text-sm font-medium text-primary">Advanced</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 85%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">PostgreSQL</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Intermediate</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 70%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Docker &amp; Kubernetes</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Working Knowledge</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 50%"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">AWS Services</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Intermediate</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 group-hover:bg-blue-500" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3: Design & Tools (Badges) -->
+<div class="lg:col-span-12">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-4 text-slate-800 dark:text-slate-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">build</span> Tools &amp; Workflow
+                                </h3>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">flutter</span> Figma
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">commit</span> Git &amp; GitHub
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">task</span> Jira
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">api</span> Postman
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">monitor</span> VS Code
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">terminal</span> Bash/Zsh
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">bug_report</span> Sentry
+                                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-sm">analytics</span> Google Analytics
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Spacer / Divider -->
+<div class="w-full flex justify-center py-2">
+<div class="h-px w-full max-w-[200px] bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent"></div>
+</div>
+<!-- Section: Professional Mindset (Soft Skills) -->
+<section class="flex flex-col gap-8 pb-10">
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">psychology</span>
+                            Professional Mindset
+                        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-8 shadow-sm border border-slate-100 dark:border-slate-800 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/20 rounded-t-xl group-hover:bg-primary transition-colors"></div>
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Problem Solving First</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                I approach every challenge by breaking it down into manageable components. My goal isn't just to patch the bug, but to understand the root cause and architect a scalable, long-term solution.
+                            </p>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-8 shadow-sm border border-slate-100 dark:border-slate-800 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/20 rounded-t-xl group-hover:bg-primary transition-colors"></div>
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">forum</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Clear Communication</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Whether writing documentation or explaining technical debt to stakeholders, I prioritize clarity. I believe transparency and proactive updates are the backbone of successful remote collaboration.
+                            </p>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-8 shadow-sm border border-slate-100 dark:border-slate-800 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/20 rounded-t-xl group-hover:bg-primary transition-colors"></div>
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Continuous Growth</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                The tech landscape never stands still, and neither do I. I dedicate time weekly to exploring new frameworks, patterns, and best practices to ensure my toolkit remains modern and effective.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 mt-auto">
+<div class="max-w-5xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="size-6 rounded bg-primary flex items-center justify-center text-white text-xs">
+<span class="material-symbols-outlined text-base">code</span>
+</div>
+<span class="font-bold">John Doe Portfolio</span>
+</div>
+<div class="flex gap-6 text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors text-sm" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors text-sm" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors text-sm" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors text-sm" href="#">Email</a>
+</div>
+<div class="text-sm text-slate-400 dark:text-slate-500">
+                    © 2023 John Doe. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</BaseLayout>
