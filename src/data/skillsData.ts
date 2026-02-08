@@ -40,16 +40,15 @@ export const skillGroups: SkillGroup[] = [
 ];
 
 export const toolBadges: ToolBadge[] = [
+  { icon: "smart_toy", name: "Codex" },
+  { icon: "smart_toy", name: "Dify" },
   { icon: "query_stats", name: "Looker Studio" },
   { icon: "database", name: "BigQuery" },
   { icon: "code", name: "SQL" },
   { icon: "monitoring", name: "GA4" },
-  { icon: "category", name: "Dovetail" },
   { icon: "flutter", name: "Figma" },
   { icon: "task", name: "JIRA" },
-  { icon: "inventory", name: "Backlog" },
   { icon: "support_agent", name: "Zendesk" },
-  { icon: "smart_toy", name: "Dify" },
   { icon: "chat", name: "Slack" },
   { icon: "terminal", name: "Laravel" },
   { icon: "web", name: "Vue.js" },

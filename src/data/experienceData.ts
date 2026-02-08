@@ -38,7 +38,7 @@ export const experiences: ExperienceItem[] = [
   {
     icon: "school",
     iconClass: "border-slate-200 text-slate-400 dark:border-slate-700",
-    role: "PM/PL",
+    role: "プロジェクトマネージャー/リーダー",
     company: "フォーサイト株式会社",
     companyClass: "text-slate-600 dark:text-slate-300",
     period: "2021年4月 - 2023年9月",

@@ -34,7 +34,7 @@ export const journeyItems: JourneyItem[] = [
       "AI/DX人材を育成するe-learningを担当。KPI策定・データ分析・UI/UX企画・コンテンツ企画をリード。",
   },
   {
-    role: "PM/PL",
+    role: "プロジェクトマネージャー/リーダー",
     period: "2021年4月 - 2023年9月",
     company: "フォーサイト株式会社",
     summary:
