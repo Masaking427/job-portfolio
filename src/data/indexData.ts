@@ -27,7 +27,7 @@ export const expertiseCards: ExpertiseCard[] = [
 
 export const journeyItems: JourneyItem[] = [
   {
-    role: "プロダクトプランナー",
+    role: "プロダクト企画",
     period: "2023年10月 - 現在",
     company: "株式会社SIGNATE",
     summary:
@@ -38,15 +38,22 @@ export const journeyItems: JourneyItem[] = [
     period: "2021年4月 - 2023年9月",
     company: "フォーサイト株式会社",
     summary:
-      "大人向け資格学習アプリを担当。UXリニューアルと新規学習機能開発をリード。",
+      "大人向け資格学習アプリを担当。アプリリニューアルと新規学習機能開発をリード。",
   },
   {
     role: "WEBエンジニア",
     period: "2020年4月 - 2021年3月",
     company: "Lotus and Company.inc",
     summary:
-      "シニア向けSNSを担当。Laravel、Vue.js、GCPで機能実装とパフォーマンス改善を実施。",
+      "シニア向けSNS開発を担当。Laravel、Vue.js、GCPで機能実装とパフォーマンス改善を実施。",
   },
+  {
+    role: "総務",
+    period: "2019年4月 - 2020年3月",
+    company: "株式会社山下電気",
+    summary:
+      "採用と広報・HP運用を担当。",
+  }
 ];
 
 export const skills: string[] = [
