@@ -94,3 +94,125 @@ export const mindsetCards: MindsetCard[] = [
       "ビジネス、エンジニア、デザイナー、コンテンツ担当をつなぎ、共通指標で意思決定します。実装可能性と事業インパクトを両立させます。",
   },
 ];
+
+import type { SkillDetailCategory } from "./types";
+
+export const skillDetailData: SkillDetailCategory[] = [
+  {
+    id: "business",
+    name: "Business",
+    items: [
+      {
+        name: "KPIツリー設計",
+        percentage: 51,
+        description:
+          "事業目標（KGI）からロジックツリーを展開し、具体的なアクションプランに落とし込むKPI設計が得意です。",
+        colorClass: {
+          bg: "bg-primary",
+          badgeBg: "bg-blue-50 dark:bg-blue-900/30",
+          badgeText: "text-blue-600 dark:text-blue-300",
+        },
+      },
+      {
+        name: "合意形成・ファシリテーション",
+        percentage: 60,
+        description:
+          "ステークホルダー間の利害調整や、会議でのファシリテーションを通じて、チームを前進させる合意形成を主導します。",
+        colorClass: {
+          bg: "bg-primary",
+          badgeBg: "bg-blue-50 dark:bg-blue-900/30",
+          badgeText: "text-blue-600 dark:text-blue-300",
+        },
+      },
+      {
+        name: "Googleアナリティクス",
+        percentage: 14,
+        description:
+          "GA4を用いた定量分析により、ユーザー行動を可視化し、データに基づいた改善施策の立案を行います。",
+        colorClass: {
+          bg: "bg-primary",
+          badgeBg: "bg-blue-50 dark:bg-blue-900/30",
+          badgeText: "text-blue-600 dark:text-blue-300",
+        },
+      },
+    ],
+  },
+  {
+    id: "ux",
+    name: "UX",
+    items: [
+      {
+        name: "ユーザーインタビュー設計と実施",
+        percentage: 30,
+        description:
+          "仮説検証のためのインタビュー設計から実施、定性データの分析までを行い、ユーザーの深層心理や課題を抽出します。",
+        colorClass: {
+          bg: "bg-purple-500",
+          badgeBg: "bg-purple-50 dark:bg-purple-900/30",
+          badgeText: "text-purple-600 dark:text-purple-300",
+        },
+      },
+      {
+        name: "ワイヤーフレームの作成",
+        percentage: 35,
+        description:
+          "Figma等を用いて素早くアイデアを可視化し、チーム内での共通認識を作るとともに、スムーズなUIデザインへの移行を支援します。",
+        colorClass: {
+          bg: "bg-purple-500",
+          badgeBg: "bg-purple-50 dark:bg-purple-900/30",
+          badgeText: "text-purple-600 dark:text-purple-300",
+        },
+      },
+      {
+        name: "カスタマージャーニーマップ",
+        percentage: 25,
+        description:
+          "プロトタイプを用いた検証で、UI/UXの課題を早期に発見・修正し、手戻りの少ない開発プロセスを実現します。",
+        colorClass: {
+          bg: "bg-purple-500",
+          badgeBg: "bg-purple-50 dark:bg-purple-900/30",
+          badgeText: "text-purple-600 dark:text-purple-300",
+        },
+      },
+    ],
+  },
+  {
+    id: "tech",
+    name: "Tech",
+    items: [
+      {
+        name: "データ分析",
+        percentage: 80,
+        description:
+          "ステークホルダーの要望を整理し、機能要件・非機能要件として明確に定義することで、エンジニアとの円滑な連携を実現します。",
+        colorClass: {
+          bg: "bg-emerald-500",
+          badgeBg: "bg-emerald-50 dark:bg-emerald-900/30",
+          badgeText: "text-emerald-600 dark:text-emerald-300",
+        },
+      },
+      {
+        name: "BIツール",
+        percentage: 64,
+        description:
+          "ビジネスゴールに基づいた「何を作るべきか」の本質的な要求を定義し、プロダクトの方向性を定めます。",
+        colorClass: {
+          bg: "bg-emerald-500",
+          badgeBg: "bg-emerald-50 dark:bg-emerald-900/30",
+          badgeText: "text-emerald-600 dark:text-emerald-300",
+        },
+      },
+      {
+        name: "WEB開発",
+        percentage: 48,
+        description:
+          "自身でDBからデータを抽出し、分析に必要なデータセットを作成。エンジニアに頼らずに仮説検証のスピードを上げます。",
+        colorClass: {
+          bg: "bg-emerald-500",
+          badgeBg: "bg-emerald-50 dark:bg-emerald-900/30",
+          badgeText: "text-emerald-600 dark:text-emerald-300",
+        },
+      },
+    ],
+  },
+];

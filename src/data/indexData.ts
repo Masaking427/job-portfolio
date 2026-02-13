@@ -9,19 +9,19 @@ export const expertiseCards: ExpertiseCard[] = [
     icon: "monitoring",
     title: "KPI設計とモニタリング",
     description:
-      "ビジネスゴールからKPIツリーを設計し、Looker StudioとBigQueryでダッシュボードで可視化して、改善サイクルを回します。",
+      "事業目標からKPIを構造化し定量的に可視化します。KPIツリーの設計からBigQuery・Looker Studioによるダッシュボード構築まで行い、データに基づく意思決定と改善サイクルを実現します。",
   },
   {
     icon: "manage_search",
     title: "定量・定性リサーチ",
     description:
-      "SQLによる行動ログ分析とユーザーインタビューを組み合わせ、再現性のある仮説を構築し、検証します。",
+      "データ分析とユーザーリサーチを組み合わせ、解くべき課題を特定します。SQLによる行動ログ分析と半構造化インタビューを使い分け、仮説構築、施策立案まで行います。",
   },
   {
     icon: "auto_stories",
     title: "機能とコンテンツの企画",
     description:
-      "UI/UX改善だけでなく教材企画や講師選定まで含めて設計し、学習成果と事業KPIの両立を推進します。",
+      "UI/UX改善、機能設計、コンテンツ企画まで一体で設計し、ユーザー体験の向上とKPI改善を実現します",
   },
 ];
 
@@ -72,8 +72,14 @@ export const skills: string[] = [
 
 export const achievements: Achievement[] = [
   {
+    value: "約1,420万円",
+    detail: "契約継続率改善により、前年比で売上増加に貢献。",
+    iconClass:
+      "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300",
+  },
+  {
     value: "+10pt",
-    detail: "SIGNATEで学習プログラムクリア率を12%から22%へ改善。",
+    detail: "学習プログラムクリア率を12%から22%へ改善。",
     iconClass:
       "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300",
   },
@@ -81,11 +87,5 @@ export const achievements: Achievement[] = [
     value: "+2.4x",
     detail: "平均テスト受験回数を1.1回から2.6回へ引き上げ、継続学習を促進。",
     iconClass: "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
-  },
-  {
-    value: "約1,420万円",
-    detail: "契約継続率改善により、前年比で売上増加に貢献。",
-    iconClass:
-      "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300",
   },
 ];

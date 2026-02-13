@@ -1,0 +1,138 @@
+---
+
+---
+
+<div class="relative flex h-[350px] w-full items-center justify-center p-4">
+    <canvas id="pdmRadarChart"></canvas>
+</div>
+
+<script>
+    import Chart from "chart.js/auto";
+
+    // TypeScript check for canvas element
+    const canvas = document.getElementById("pdmRadarChart");
+
+    if (canvas instanceof HTMLCanvasElement) {
+        const ctx = canvas;
+
+        // Theme colors
+        const primaryColor = "#137fec";
+        const gridColorLight = "#e2e8f0"; // slate-200
+        const gridColorDark = "#334155"; // slate-700
+        const textColorLight = "#475569"; // slate-600
+        const textColorDark = "#94a3b8"; // slate-400
+        const pointBg = "#137fec";
+
+        let chartInstance: any = null;
+
+        function getThemeColors() {
+            const isDark = document.documentElement.classList.contains("dark");
+            return {
+                grid: isDark ? gridColorDark : gridColorLight,
+                text: isDark ? textColorDark : textColorLight,
+                backdrop: isDark ? "#1e293b" : "#ffffff",
+            };
+        }
+
+        function initChart() {
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            const colors = getThemeColors();
+
+            const config: any = {
+                type: "radar",
+                data: {
+                    labels: ["ビジネス", "ユーザー", "テクノロジー"],
+                    datasets: [
+                        {
+                            label: "Skill Score",
+                            data: [18, 60, 69],
+                            fill: true,
+                            backgroundColor: "rgba(19, 127, 236, 0.2)",
+                            borderColor: primaryColor,
+                            pointBackgroundColor: pointBg,
+                            pointBorderColor: "#fff",
+                            pointHoverBackgroundColor: "#fff",
+                            pointHoverBorderColor: primaryColor,
+                            borderWidth: 2,
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: colors.grid,
+                            },
+                            grid: {
+                                color: colors.grid,
+                            },
+                            pointLabels: {
+                                color: colors.text,
+                                font: {
+                                    size: 14,
+                                    weight: "bold",
+                                    family: "'Inter', sans-serif",
+                                },
+                            },
+                            ticks: {
+                                display: false,
+                                backdropColor: "transparent",
+                                stepSize: 20,
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context: any) {
+                                    return context.parsed.r + "%";
+                                },
+                            },
+                        },
+                    },
+                },
+            };
+
+            chartInstance = new Chart(ctx, config);
+        }
+
+        // Initial render
+        initChart();
+
+        // Observer for dark mode changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (
+                    mutation.type === "attributes" &&
+                    mutation.attributeName === "class"
+                ) {
+                    initChart();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class"],
+        });
+
+        // View Transition support
+        document.addEventListener("astro:after-swap", () => {
+            // Re-run the script logic if needed, but in Astro inline scripts run once per page load.
+            // If View Transitions are used, scripts might re-run or need re-initialization.
+            // For now, simpler is better.
+        });
+    }
+</script>

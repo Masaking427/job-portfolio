@@ -78,3 +78,21 @@ export interface MindsetCard {
   title: string;
   description: string;
 }
+
+export interface SkillDetailItem {
+  name: string;
+  percentage: number;
+  description: string;
+  // Dynamic color classes for styling
+  colorClass: {
+    bg: string;     // for progress bar background e.g. "bg-primary"
+    badgeBg: string; // for badge background e.g. "bg-blue-50"
+    badgeText: string; // for badge text e.g. "text-blue-600"
+  };
+}
+
+export interface SkillDetailCategory {
+  id: string; // "business", "ux", "tech"
+  name: string; // "Business", "UX", "Tech"
+  items: SkillDetailItem[];
+}

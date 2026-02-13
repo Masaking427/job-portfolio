@@ -4,7 +4,7 @@ export const experiences: ExperienceItem[] = [
   {
     icon: "work",
     iconClass: "border-primary text-primary dark:border-primary",
-    role: "プロダクトプランナー",
+    role: "プロダクト企画",
     company: "株式会社SIGNATE",
     product: { name: "SIGNATE Cloud", url: "https://cloud.signate.jp/" },
     companyClass: "text-primary",

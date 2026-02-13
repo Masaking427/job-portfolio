@@ -1,0 +1,106 @@
+---
+import { skillDetailData } from "../data/skillsData";
+import SkillItem from "./SkillItem.astro";
+---
+
+<div
+    class="flex flex-col h-full rounded-xl border border-slate-100 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900 overflow-hidden"
+>
+    <!-- Tabs -->
+    <div class="flex border-b border-slate-100 dark:border-slate-800">
+        {
+            skillDetailData.map((category, index) => (
+                <button
+                    class="tab-btn flex-1 px-4 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 hover:bg-slate-50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-colors relative data-[active=true]:text-primary data-[active=true]:bg-slate-50 dark:data-[active=true]:bg-slate-800/50"
+                    data-tab={category.id}
+                    data-active={index === 0 ? "true" : "false"}
+                >
+                    {category.name}
+                    <div class="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 transition-transform duration-300 data-[active=true]:scale-x-100 origin-left" />
+                </button>
+            ))
+        }
+    </div>
+
+    <!-- Content -->
+    <div class="relative flex-1 p-6">
+        {
+            skillDetailData.map((category, index) => (
+                <div
+                    id={`content-${category.id}`}
+                    class={`tab-content flex-col gap-4 animate-fadeIn ${index === 0 ? "flex" : "hidden"}`}
+                >
+                    {category.items.map((item) => (
+                        <SkillItem item={item} />
+                    ))}
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    function setupTabs() {
+        const buttons = document.querySelectorAll<HTMLElement>(".tab-btn");
+        const contents = document.querySelectorAll<HTMLElement>(".tab-content");
+
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const tab = btn.getAttribute("data-tab");
+
+                // Update active state for buttons
+                buttons.forEach((b) => {
+                    if (b.getAttribute("data-tab") === tab) {
+                        b.setAttribute("data-active", "true");
+                        // Optional: find the underline div and scale it
+                        const indicator = b.querySelector<HTMLElement>("div");
+                        if (indicator) indicator.style.transform = "scaleX(1)";
+                    } else {
+                        b.setAttribute("data-active", "false");
+                        const indicator = b.querySelector<HTMLElement>("div");
+                        if (indicator) indicator.style.transform = "scaleX(0)";
+                    }
+                });
+
+                // Show/Hide content
+                contents.forEach((content) => {
+                    if (content.id === `content-${tab}`) {
+                        content.classList.remove("hidden");
+                        content.classList.add("flex");
+                        // Re-trigger animation
+                        content.style.animation = "none";
+                        content.offsetHeight; /* trigger reflow */
+                        content.style.animation = "";
+                    } else {
+                        content.classList.add("hidden");
+                        content.classList.remove("flex");
+                    }
+                });
+            });
+        });
+    }
+
+    // Initial setup
+    setupTabs();
+
+    // Support for View Transitions
+    document.addEventListener("astro:page-load", () => {
+        setupTabs();
+    });
+</script>
+
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fadeIn {
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+</style>
