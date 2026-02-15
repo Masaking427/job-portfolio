@@ -49,7 +49,7 @@ import {
               <span class="material-symbols-outlined text-primary"
                 >change_history</span
               >
-              プロダクトマネジメントトライアングル
+              プロダクトマネジメント・トライアングル
             </h2>
           </div>
 
@@ -81,15 +81,24 @@ import {
                   >
                   ツール
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="grid gap-4 sm:grid-cols-2">
                   {
-                    toolBadges.map((tool) => (
-                      <span class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
-                        <span class="material-symbols-outlined text-sm">
-                          {tool.icon}
-                        </span>
-                        {tool.name}
-                      </span>
+                    toolBadges.map((category) => (
+                      <div class="flex flex-col gap-2">
+                        <h3 class="text-xs font-bold text-slate-500 dark:text-slate-400">
+                          {category.name}
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                          {category.items.map((tool) => (
+                            <span class="inline-flex items-center gap-1.5 rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-400">
+                              <span class="material-symbols-outlined text-[14px]">
+                                {tool.icon}
+                              </span>
+                              {tool.name}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     ))
                   }
                 </div>

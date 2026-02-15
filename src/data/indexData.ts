@@ -4,24 +4,45 @@ import type {
   JourneyItem,
 } from "./types";
 
+// export const expertiseCards: ExpertiseCard[] = [
+//   {
+//     icon: "monitoring",
+//     title: "KPI設計とモニタリング",
+//     description:
+//       "事業目標からKPIを構造化し定量的に可視化します。KPIツリーの設計からBigQuery・Looker Studioによるダッシュボード構築まで行い、データに基づく意思決定と改善サイクルを実現します。",
+//   },
+//   {
+//     icon: "manage_search",
+//     title: "定量・定性リサーチ",
+//     description:
+//       "データ分析とユーザーリサーチを組み合わせ、解くべき課題を特定します。SQLによる行動ログ分析と半構造化インタビューを使い分け、仮説構築、施策立案まで行います。",
+//   },
+//   {
+//     icon: "auto_stories",
+//     title: "機能とコンテンツの企画",
+//     description:
+//       "UI/UX改善、機能設計、コンテンツ企画まで一体で設計し、ユーザー体験の向上とKPI改善を実現します",
+//   },
+// ];
+
 export const expertiseCards: ExpertiseCard[] = [
   {
-    icon: "monitoring",
-    title: "KPI設計とモニタリング",
+    icon: "analytics",
+    title: "データ分析で「why」を語る",
     description:
-      "事業目標からKPIを構造化し定量的に可視化します。KPIツリーの設計からBigQuery・Looker Studioによるダッシュボード構築まで行い、データに基づく意思決定と改善サイクルを実現します。",
+      "BigQueryでデータ分析を行い「なぜこの課題を解くべきか」をグラフで説得力を持って伝えます。\n 事業目標からKPIを構造化し、定量・定性データから仮説構築、改善計画の立案まで一貫して実施します。",
   },
   {
-    icon: "manage_search",
-    title: "定量・定性リサーチ",
+    icon: "draw",
+    title: "プロトタイプで「what」を語る",
     description:
-      "データ分析とユーザーリサーチを組み合わせ、解くべき課題を特定します。SQLによる行動ログ分析と半構造化インタビューを使い分け、仮説構築、施策立案まで行います。",
+      "Codexで実働するプロトタイプを開発し「何を作るべきか」をビジュアルで具体化します。\n UI/UX設計、機能企画、コンテンツ企画を一体で行い、ユーザー体験の向上とKPI改善を実現します。",
   },
   {
-    icon: "auto_stories",
-    title: "機能とコンテンツの企画",
+    icon: "groups",
+    title: "ステークホルダーコミュニケーション",
     description:
-      "UI/UX改善、機能設計、コンテンツ企画まで一体で設計し、ユーザー体験の向上とKPI改善を実現します",
+      "営業・開発・外部パートナーなど多様なステークホルダーと円滑にコミュニケーションを取り、プロジェクトを推進します",
   },
 ];
 
